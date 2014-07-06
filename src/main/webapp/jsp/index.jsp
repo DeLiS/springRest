@@ -9,8 +9,8 @@
     <h2>Hello World!</h2>
     <ul>
         <li ng-repeat="comment in comments">
-            <h3>{{comment.author}}<h3>
-            <h4>{{comment.text}}<h4>
+            <h3>{{comment.text}}<h3>
+            <h4>{{comment.author}}<h4>
         </li>
     </ul>
 
