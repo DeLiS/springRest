@@ -1,11 +1,29 @@
 package com.test.app.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 /**
  * Created by Denis on 06.07.2014.
  */
+@Entity
 public class Comment {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @NotNull
+    @Size(min=1)
     private String author;
+
+    @NotNull
+    @Size(min=1)
     private String text;
+
+    public Comment(){}
 
     public Comment(String author, String text) {
         this.author = author;
